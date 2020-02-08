@@ -1,0 +1,17 @@
+
+@font-face {
+    font-family: 'junicodeboldcondensed';
+    src: url('/styles/fonts/junicode-boldcondensed-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+@font-face {
+    font-family: 'junicodebolditaliccondensed';
+    src: url('/styles/fonts/junicode-bolditaliccondensed-webfont.woff2') format('woff2');
+    font-weight: italic;
+    font-style: italic;
+
+}
