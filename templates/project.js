@@ -1,8 +1,8 @@
-var html = require('choo/html')
+let html = require('choo/html')
 
 module.exports = function (project) {
-	var num = project.num
-	var title = project.title
+	let num = project.num
+	let title = project.title
 
 	return html `
 		<p> ${num} : ${title}</p>

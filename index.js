@@ -1,9 +1,14 @@
-var choo = require('choo')
-var html = require ('choo/html')
+// require frameworks
+let html = require ('choo/html')
+let choo = require('choo')
 
-var app = choo()
+// initialize app
+let app = choo()
 
+
+// pass down states!
 app.use(function (state) {
+	// set states
 	state.projects = [
 		{num: '1.', title: 'kashmir princess'},
 		{num: '2.', title: 'fugitivity'},
@@ -13,7 +18,9 @@ app.use(function (state) {
 	]
 })
 
-var main = require ('./templates/main.js')
+// use templates
+let main = require ('./templates/main.js')
 
+// route up! mount up!
 app.route('/', main)
-app.mount('body')
+app.mount('div')

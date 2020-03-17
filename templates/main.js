@@ -1,15 +1,19 @@
-var html = require('choo/html')
+// import template helper
+let html = require('choo/html')
 
-var projects = require('./project.js')
+// import template!
+let project = require('./project.js')
 
 module.exports = function (state) {
-	var state.projects
 	return html `
 		<div>
-			<h1 >Exit Lane</p>
-		</div>
-		<div>
-			${state.projects.map(project)}
+			<div>
+				<h1 >Exit Lane</p>
+				${state.projects.map(project)}
+			</div>
 		</div>
 	`
+
+// require frameworks
+
 }
