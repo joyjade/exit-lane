@@ -7,7 +7,7 @@ let app = choo()
 
 
 // pass down states!
-app.use(function (state) {
+app.use( (state,emitter) => {
 	// set states
 	state.projects = [
 		{num: '1.', title: 'kashmir princess'},
@@ -16,6 +16,12 @@ app.use(function (state) {
 		{num: '4.', title: 'exit lane'},
 		{num: '5.', title: 'grief'}
 	]
+
+	state.tick = {time: new Date().toLocaleTimeString()}
+	setInterval(() => {
+		state.tick = {time: new Date().toLocaleTimeString()}, 
+		emitter.emit('render')
+	}, 1000)
 })
 
 // use templates

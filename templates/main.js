@@ -8,12 +8,11 @@ module.exports = function (state) {
 	return html `
 		<div>
 			<div>
-				<h1 >Exit Lane</p>
+				<h1>Exit Lane</h1>
 				${state.projects.map(project)}
 			</div>
+			<h1>${state.tick.time}</h1>
 		</div>
 	`
-
-// require frameworks
 
 }
